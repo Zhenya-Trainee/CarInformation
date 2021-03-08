@@ -1,0 +1,84 @@
+/* First level sub-menu styles
+========================================================*/
+
+.newMenu{
+    position: relative;
+}
+
+.slide-my {
+    position: absolute;
+    top: 85px;
+    left: 0px;
+    background: #f9ca27;
+    list-style-type: none;
+    min-width: 157px;
+    z-index: 999;
+    display: none;
+    text-align: left;
+    padding-left: 0px;
+    padding-top: 0px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.slide-my:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: calc(25% - 3px);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #f9ca27;
+}
+
+.slide-my li {
+    position: relative;
+    height: 48px;
+    line-height: 48px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+.slide-my li a {
+    line-height: 12px;
+    padding: 10px 0;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    display: block;
+}
+.slide-my li:hover > a {
+    color: #7d261a;
+}
+/* Second level sub-menu styles
+========================================================*/
+.slide-my ul {
+    position: absolute;
+    top: 0;
+    left: 126px;
+    z-index: 4;
+    min-width: 157px;
+    border: none;
+    background: #dbb3ae;
+}
+.slide-my ul:before {
+    display: none;
+}
+.slide-my ul a:hover {
+    color: #d94d3a;
+}
+@media only screen and (max-width: 767px) {
+    .slide-my {
+        display: none;
+    }
+    .select-menu {
+        display: block;
+        width: 100%;
+        border-color: #d94d3a;
+        color: #666;
+        font-size: 16px;
+        padding: 5px;
+    }
+}
